@@ -1,0 +1,243 @@
+<!DOCTYPE html> 
+<!-- Formularios -->
+<html>   
+<head>   
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="icon" type="image/png" href="Imágenes/poli.png"> 
+<title> Formularios </title>
+<style>
+	body
+	{
+		background-color: lightgrey;
+		font-family: arial, verdana, sans-serif; /*Fuentes, 3 por disposición del navegador*/
+		color: white;
+	}
+	h1
+	{
+		background-color: grey;
+		text-align: right;
+		padding: 20px; /*Ancho del cuadro de texto*/
+	}
+	div
+	{
+		width: 80%; /*Espacio entre el borde de la página y el borde del contenido*/
+		background-color: firebrick;
+		margin: auto; /*Centra automáticamente*/
+	}
+	fieldset
+	{
+		border: 3px solid lightgrey;
+		border-radius: 10px; /*Redondea bordes*/
+	}
+	input[type=text] /*Con la asignación se condiciona al input a sólo modificarse para los que sean de texto*/
+	{
+		width: 100%;
+		border: 3px solid lightgrey;
+		border-radius: 5px;
+		padding: 5px;
+		box-sizing: border-box; /*Los bordes no sobresaldrán del ancho del div*/
+		margin: 2px;
+	}
+	label
+	{
+		line-height: 40px; /*Separa cada contenedor*/
+	}
+	input[type=password]
+	{
+		width: 100%;
+		border: none;
+		border-bottom: 3px solid lightgrey; /*Agrega únicamente el borde inferior, border-top es el opuesto, border rigth y left, respectivamente*/
+		padding: 5px;
+		box-sizing: border-box; 
+	}
+	input[type=number]
+	{
+		width: 100%;
+		border: 2px solid lightgrey;
+		padding: 12px;
+		border-radius: 4px;
+		box-sizing: border-box; 
+	}
+	input[type=number]:focus /*Focus funciona al hacer click en el recuadro*/
+	{
+		width: 100%;
+		border: 2px solid lightgrey;
+		border-radius: 4px;
+		padding: 12px;
+		box-sizing: border-box; 
+		background-color: grey;
+		color: white;
+	}
+	input[type=url]
+	{
+		width: 25%;
+		border: 2px solid lightgrey;
+		border-radius: 4px;
+		padding: 12px 5px 12px 40px; /*Con un valor, todos los bordes son iguales, con 4, el 1ro Superior, 3do inferior, 1ro Derecho, 4to Izquierdo*/
+		box-sizing: border-box;
+		background-image: url(icono1.png); /*Añade una iamgen en el cuadro de texto*/
+		background-repeat: no-repeat; /*Hace que la imagen no se repita*/
+		background-position: 10px 2px;
+	}
+	input[type=url]:focus
+	{
+		width: 100%;
+		transition: width 0.4s ease-in-out; /*Agrega una transición cuando el usuario hace click en el cuadro, con el witdh determinamos el tiempo que tarda la transición, con ease determinamos cuándo se realiza la transición, pudiendo ser in, out, in-out*/
+		transition-delay: 0s;
+	}
+	select
+	{
+		width: 100%;
+		border: none;
+		padding: 12px;
+	}
+	textarea
+	{
+		border-radius: 4px;
+		border: 2px solid lightgrey;
+		width: 100%;
+		box-sizing: border-box;
+		padding: 12px;
+		height: 100px;
+		resize: none; /*Hace que el textarea no se mueva*/
+	}
+	input[type=submit]
+	{
+		width: 100%;
+		border: 2px solid lightgrey;
+		padding: 12px;
+		border-radius: 4px;
+		box-sizing: border-box; 
+	}
+	input[type=reset]
+	{
+		width: 100%;
+		border: 2px solid lightgrey;
+		padding: 12px;
+		border-radius: 4px;
+		box-sizing: border-box; 
+		margin-top: 10px;
+	}
+	input[type=submit]:hover /*Hover funciona al pasar el mouse por el recuadro*/
+	{
+		width: 100%;
+		border: 2px solid lightgrey;
+		padding: 12px;
+		border-radius: 4px;
+		box-sizing: border-box; 
+		background-color: black;
+		color: white;
+	}
+	input[type=reset]:hover
+	{
+		width: 100%;
+		border: 2px solid lightgrey;
+		padding: 12px;
+		border-radius: 4px;
+		box-sizing: border-box; 
+		background-color: black;
+		color: white;
+	}
+</style>
+</head>	
+<body> 
+	<div>
+	<header>
+		<h1>
+			Compras online
+		</h1>
+	</header>
+<section>
+	<form method="post" action="" 
+	enctype="text/plain">
+	<fieldset>
+		<legend>Información del Cliente</legend> 
+		<label for="nombre">
+		Nombre: 
+		</label><br/>
+		<input type="text" maxlength="25" placeholder="Nombre" name="nombre" id="nombre" autofocus/>
+		<label for="ap">
+		Apellido paterno:
+		</label><br/>
+		<input type="text" maxlength="25" placeholder="Apellido paterno" name="ap" id="ap"/>
+		<label for="am">
+		Apellido materno:
+		</label><br/>
+		<input type="text" maxlength="25" placeholder="Apellido materno" name="am" id="am"/><br/>
+		<label for="user">
+		Nombre de usuario: 
+		</label><br/>
+		<input type="text" maxlength="25" placeholder="Usuario" name="user" id="user"/>
+		<label for="pass">
+		Contraseña:
+		</label><br/>
+		<input type="password" maxlength="25" placeholder="Password" name="pass" id="pass"/>
+	</fieldset>
+	<fieldset>
+		<legend>Datos de facturación</legend> 
+		<label for="calle">
+		Calle: 
+		</label><br/>
+		<input type="text" maxlength="25" placeholder="Usuario" name="usuario" id="usuario"/>
+		<label for="numero">
+		Num:
+		</label><br/>
+		<input type="text" name="numero" id="numero" placeholder="Num. Exterior" maxlength="20" />
+		<label for="col">
+		Colonia: 
+		</label><br/>
+		<input type="text" name="col" id="col" placeholder="Colonia"/>
+		<label for="correo">
+		E-mail: 
+		</label><br/>
+		<input type="text" maxlength="25" placeholder="E-mail" name="correo" id="correo" />
+		<label for="cp">
+		Código Postal:
+		</label><br/>
+		<input type="number" name="cp" id="cp" placeholder="C.P."/><br/>
+		<label for="rfc">
+		R.F.C.: 
+		</label><br/>
+		<input type="text" name="rfc" id="rfc" placeholder="R.F.C."/>
+			<label for="web">Sitio web:</label>
+			<input type="url" name="web" id="web">
+		</fieldset>
+		<fieldset>
+			<legend>Datos del artículo adquirido</legend> 
+		<label for="marca">Tipo</label><br/>
+			<select name="marca" id="marca" size="5">
+			<option>Vestido</option>
+			<option>Pantalón</option>
+			<option>Playera</option>
+			<option>Camisa</option>
+			<option>Chamarra</option>
+			</select>
+
+		<label for="producto">Talla</label><br/>
+		<input type="checkbox"/>Chico<br/>
+		<input type="checkbox"/>Mediano<br/>
+		<input type="checkbox"/>Grande<br/>
+
+					
+		<label for="colores">Selecciona el Color</label><br/>	
+		<input type="color" name="colores" id="colores" placeholder="Color" /><br/><br/>
+
+		<label for="comentarios">Sugerencias:</label>
+		<textarea name="comentarios" id="comentarios"></textarea>
+
+		<input type="submit" name="enviar" id="enviar" value="Enviar datos">
+		<input type="reset" name="borrar" id="borrar" value="Borrar datos">
+		
+		</fieldset>
+	</form>
+
+</section>
+<footer>
+	<h3>
+	&copy; Distribuidor autorizado de productos de calidad.
+	</h3>
+
+</footer>
+</div>
+</body>
+</html>
