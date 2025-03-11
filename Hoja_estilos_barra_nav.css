@@ -1,0 +1,57 @@
+/*Hoja de estilos para "Barra Nav.html"*/
+.capa1
+{
+	margin-left: 15%; /* Con esta configuración, se crea una barra lateral izquierda de navegación */
+	padding: 12px;
+	height: 1000px;
+}
+ul
+{
+	list-style-type: none; /*Esta función da estilo a las viñetas de la lista, con 'none', estas desaparecen*/
+	margin: 0;
+	padding: 0;
+	width: 15%;
+	height: 100%;
+	position: fixed; /*Mantiene la lista a la izquierda de la pantalla siempre*/
+	background-color: lightblue;
+	overflow: auto; /*Agrega las flehcas de desplazamiento en caso de tener mucho contenido en la barra*/
+}
+li a
+{
+	background-color: lightblue;
+	color: black;
+	display: block; /*Esta función agrupa los listados en un bloque*/
+	padding: 6px 12px;
+	text-decoration: none; /*Agrega decoración a los textos, con 'none', estas desaparecen*/
+}
+li a:hover
+{
+	background-color: lightgray;
+	color: black;	
+}
+/*
+Se puede referencia por id y class, para:
+id = #texto1 
+{ 
+
+}
+class = .texto1
+{
+	
+}
+*/
+li a.activo 
+{
+	background-color: royalblue;
+}
+li a.activo:hover
+{
+	background-color: royalblue;
+	color: white;
+}
+/*li a:hover:not(.activo)
+{
+	background-color: lightgray;
+	color: black;
+}
+*/

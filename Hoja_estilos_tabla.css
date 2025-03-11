@@ -1,0 +1,43 @@
+/*Hoja de estilos para "Tablas.html"*/
+body
+{
+	background-color: lightgoldenrodyellow;
+	font-family: arial, verdana, sans-serif;
+
+}
+table
+{
+	width: 90%;
+	margin: auto;
+	border: 5px solid black;
+	border-collapse: collapse;
+	caption-side: top;
+}
+th, td
+{
+	border: 3px solid gray;
+}
+/*p:nth-child(n) llama al párrafo en esa posición, odd=impares, even=pares*/
+table tr:nth-child(odd)
+{
+	background-color: white;
+}
+table tr:nth-child(even)
+{
+	background-color: lightgreen;
+}
+th
+{
+	background-color: lightgreen;
+	padding: 15px;
+}
+td
+{
+	padding: 10px;
+	text-align: justify;
+}
+table td:hover
+{
+	background-color: darkgreen;
+	color: white;
+}
