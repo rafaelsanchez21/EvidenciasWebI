@@ -54,4 +54,37 @@ li a.activo:hover
 	background-color: lightgray;
 	color: black;
 }
+
+Esta opción habilita una fuente diferente extraída desde Google Fonts, se obtiene mediante los siguientes pasos:
+entrar a GoogleFonts, buscar una fuente, clickear en obtener código, copiar y pegar el primer fragmento en la parte .html
+y el segundo en la hoja .ccs con los arreglos correspondientes. 
+*/
+h1
+{
+  font-family: "Big Shoulders Stencil", system-ui, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+p
+{
+  font-family: "Roboto mono", system-ui, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+/*
+font-face
+{
+	font-family: "parrafos";
+	src: url(static/Rubik-Italic.ttf)format("truetype");
+}
+p
+{
+	font-family: 'parrafos';
+}
+Con esta opción, podemos descargar una fuente para usar en más de un código, se siguen los siguientes pasos:
+se decarga un .rar, se descomprime y la carpeta obtenida se copia a la ubicación del archivo html editado
+después, se le asigna un nombre, y se activa el comando src, seguido de url, en donde copiamos el nombre de la carpeta
+/ el nombre de la fuente, y format, que es el tipo de archivo de la fuente.
+Después esto se asigna a un estilo p ya asignado o se crea uno nuevo mediante font-family y el nombre de la fuente.
 */
