@@ -1,0 +1,62 @@
+*
+{
+	margin: 0;
+	padding: 0;
+}
+.contenedor
+{
+	display: flex; /*Caja flexible*/
+	flex-direction: column;
+	background: ;
+	height: 100vh; /*Viewport heigth permite que el sitio sea responsivo*/
+
+}
+.encabezado
+{
+	background-color: blue;
+	color: white;
+	/*width: 150px;*/
+	padding:15px;
+	margin: 10px;
+	font-family: arial;
+	line-height: 10px;
+	text-align: center;
+}
+.contenido
+{
+	display: flex;
+	flex-direction: space-between;
+	flex: 1; /*Con esta opción el contenido utiliza todo el espacio restante en la página hasta el footer*/
+	background:;
+	border-radius: 10px;
+}
+
+.texto
+{
+	padding: 15px;
+	margin: 15px;
+	border: 1px solid grey;
+	flex: 1;
+	box-shadow: -10px 10px rgba(0, 0, 0, 0.5); /*Ocupa 3 valores, los 2 primeros son coordenadas,
+	acomodadas como el plano cartesiano, y el último valor es el color*/
+	/*rgba es otra forma de mostrar de mostrar valores, el "a" indica opacidad, desde 0(transparente) a 1(opaco*/
+}
+
+footer
+{
+	text-align: center;
+	color: ;
+	background: lightcyan;
+	padding: 10px;
+}
+
+/*Evalúa una condición según el dispositivo en donde se visualiza la página
+la condición indica que si el ancho máximo de la ventana es de 500px, cambia a lo de adentro de las llaves, 
+pudiendo anidar clases, en "inspeccionar" se puede ver los valores del tamaño de la página*/
+@media(max-width:500px) 
+{
+	.contenido
+	{
+		flex-direction: column;
+	}
+}
