@@ -1,0 +1,54 @@
+.contenedor
+{
+	position: relative; /*La posición estará según el flujo de los documentos de la página*/
+	top: 25px;
+	background: orange;
+	height: 100px;
+}	
+.C1
+{
+	position: relative;
+	height: 30px;
+	background: blueviolet;
+	left: 50px; /*Lo mueve desde la esquina izquierda*/
+	top: 5px ; /*Lo mueve relativo al contenedor del cual es parte, no de su propia división*/
+	z-index: 1;
+}
+.C2
+{
+	position: absolute; /*La posición se sobrepone a los demás elementos; no utiliza un espacio dentro del contenedor; no fluye*/
+	background: darkcyan;
+	right: 50px;
+	height: 120px;
+	width: 150px;
+	z-index: 2; /*Trae al frente o atrás los contenedores, dependiendo de las preferencias del usuario*/
+}
+.C3
+{
+	position: absolute;
+	background: darkred;
+	height: 150px;
+	width: 150px;
+	left: 180px;
+	z-index: 1;
+}
+.C4
+{
+	position: absolute;
+	background: indianred;
+	right: 50px;
+	height: 90px;
+	width: 120px;
+	top: 100px;
+	z-index: 3;
+}
+.C5
+{
+	position: fixed; /*La posición queda fija en la página, útil para cuadros de diálogo en un chatbot*/
+	border: 2px solid blue;
+	height: 50px;
+	width: 200px;
+	bottom: 0px; /*Coloca el contenedor en el pie de página; top, bottom, right, left, según se necesite*/
+	right: 0px;
+	z-index: 4;
+}
