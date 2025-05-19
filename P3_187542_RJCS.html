@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Propina</title>
+    <link rel="stylesheet" href="hoja_css.css">
+</head>
+<body>
+    <div class="contenedor">
+        <h2>Calcula la propina:</h2>
+        <form id="formulario">
+            <label for="subtotal">Total a pagar:</label>
+            <input type="number" id="subtotal" required>
+
+            <label for="propina">Porcentaje de propina:</label>
+            <input list="porcentaje" id="propina" type="number" required>
+            <datalist id="propina">
+                <option value="5"></option>
+                <option value="10"></option>
+                <option value="15"></option>
+                <option value="20"></option>
+            </datalist>
+
+            <button type="button" onclick="calcularPropina()">Calcular</button>
+        </form>
+
+        <div id="resultado"></div>
+    </div>
+
+    <script src="hoja_script.js"></script>
+</body>
+</html>
